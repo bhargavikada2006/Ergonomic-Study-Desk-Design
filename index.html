@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ErgoNext | Ergonomic Study Desk Design</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css?v=2">
+    <!-- Cache-busting inline styles for tabs -->
+    <style>
+        .tab-section {
+            display: none !important;
+            animation: fadeInTab 0.5s ease-out forwards;
+        }
+        .tab-section.active {
+            display: block !important;
+        }
+        @keyframes fadeInTab {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    <!-- Mermaid.js -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Ergo<span>Next</span></div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-btn active" data-target="home">Home</a></li>
+            <li><a href="#research" class="nav-btn" data-target="research">Research</a></li>
+            <li><a href="#concept" class="nav-btn" data-target="concept">Concept</a></li>
+            <li><a href="#specifications" class="nav-btn" data-target="specifications">Specs</a></li>
+            <li><a href="#prototype" class="nav-btn" data-target="prototype">Prototype</a></li>
+            <li><a href="#process" class="nav-btn" data-target="process">Process Flow</a></li>
+            <li><a href="#feedback" class="nav-btn" data-target="feedback"><i class="fa-solid fa-flask"></i> Testing Data</a></li>
+        </ul>
+        <button id="theme-toggle" class="icon-button" aria-label="Toggle Light Mode" style="background:transparent; border:none; color:var(--text-main); font-size:1.5rem; cursor:pointer;">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </nav>
+
+    <main id="main-content">
+        <!-- HOME SECTION -->
+        <header id="home" class="tab-section active hero">
+            <div class="hero-content">
+                <h1 class="animate-fade-in-up">Ergonomic Study Desk <br><span class="gradient-text">Innovation Lab</span></h1>
+                <p class="animate-fade-in-up delay-1" style="font-size: 1.15rem; margin-bottom: 2rem;">Welcome to our Design Thinking experiment. We are exploring the intersection of student posture and fundamental art geometry—transforming the basic elements of <strong>Dots, Lines, and Shapes</strong> into a highly functional, posture-correcting workspace.</p>
+                <div class="hero-buttons animate-fade-in-up delay-2">
+                    <button class="btn btn-primary nav-action" data-target="concept">Explore Concept</button>
+                    <button class="btn btn-outline nav-action" data-target="process">View Flowchart</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="glass-orb"></div>
+                <!-- 3D Photo ONLY on home page -->
+                <img src="assets/design.png" alt="Abstract 3D Design Elements">
+            </div>
+        </header>
+
+        <!-- RESEARCH (EMPATHIZE PHASE) SECTION -->
+        <section id="research" class="tab-section section center-content">
+            <h2 class="section-title">The <span class="gradient-text">Problem vs Solution</span></h2>
+            <p class="subtitle" style="max-width: 700px; margin: 0 auto 3rem auto;">Swipe vertically left and right to see the drastic difference between a standard cluttered desk causing severe spinal strain versus our precisely architected ergonomic setup.</p>
+            
+            <div class="slider-container">
+                <div class="image-comparison">
+                    <!-- Right image (Bad Posture) -->
+                    <img src="assets/bad_posture.png" alt="Standard Bad Posture Desk" class="image-after">
+                    <!-- Left image masked (Good Posture) -->
+                    <div class="image-before-container" id="before-container">
+                        <img src="assets/good_posture.png" alt="Ideal Ergonomic Posture" style="width: 800px; max-width: none;">
+                    </div>
+                    <!-- Handle -->
+                    <div class="slider-handle" id="slider-handle">
+                        <div class="slider-arrow left"></div>
+                        <div class="slider-arrow right"></div>
+                    </div>
+                </div>
+               <input type="range" class="slider-range" id="slider" min="0" max="100" value="50">
+            </div>
+            <div style="display: flex; justify-content:space-between; max-width: 800px; width:100%; margin: 1rem auto; color: var(--text-muted); font-weight: bold; font-size: 1.1rem;">
+                <span style="color: #10b981;">← Engineered Solution</span>
+                <span style="color: #ef4444;">Standard Reality →</span>
+            </div>
+        </section>
+
+        <!-- CONCEPT SECTION -->
+        <section id="concept" class="tab-section section">
+            <h2 class="section-title text-center">Understanding the <span class="gradient-text">Concept</span></h2>
+            <p class="subtitle text-center" style="max-width: 800px; margin: 0 auto 4rem auto;">
+                Our idea translates the fundamental elements of art—Dots, Lines, and Shapes—into a highly functional, ergonomic study desk. Rather than randomly adding features, every aspect of the desk is derived directly from these basic geometries. Here is how:
+            </p>
+            <div class="concept-grid">
+                <div class="concept-card card-glow">
+                    <div class="icon"><i class="fa-solid fa-circle"></i></div>
+                    <h3>The Dot (Junctions & Focus)</h3>
+                    <p>Dots act as focal points and connections. In our desk, the 'dots' are the physical joints where legs meet the table, clean cable management pass-throughs, and the circular flush-mounted wireless charging hub for your devices.</p>
+                </div>
+                <div class="concept-card card-glow">
+                    <div class="icon"><i class="fa-solid fa-wave-square"></i></div>
+                    <h3>The Line (Posture & Flow)</h3>
+                    <p>Lines dictate movement and direction. The sweeping carved lines along the edge of the desk provide an organic resting curve for your wrists. The long, continuous lines of the aluminum legs enable smooth height adjustments for optimal posture.</p>
+                </div>
+                <div class="concept-card card-glow">
+                    <div class="icon"><i class="fa-solid fa-shapes"></i></div>
+                    <h3>The Shape (Structure & Surface)</h3>
+                    <p>Shapes combine dots and lines into stable structures. We utilize heavy triangular bases (the strongest structural shape in engineering) for maximum stability, paired with soft, rounded rectangles for the desk surface to eliminate harsh, uncomfortable edges.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPECIFICATIONS SECTION -->
+        <section id="specifications" class="tab-section section bg-secondary">
+            <div class="container">
+                <h2 class="section-title text-center">Technical <span class="gradient-text">Specifications</span></h2>
+                <div class="specs-wrapper">
+                    <div class="specs-content" style="flex: 1; max-width: 800px; margin: 0 auto;">
+                        <div class="spec-item">
+                            <i class="fa-solid fa-ruler-combined"></i>
+                            <div>
+                                <h4>Dimensions</h4>
+                                <p>Surface Area: 120cm x 60cm <br> Base Height: Adjustable pneumatics from 70cm to 120cm <br> Monitor Shelf: 100cm x 20cm, positioned right at eye-level.</p>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fa-solid fa-chair"></i>
+                            <div>
+                                <h4>Ergonomic Enhancements</h4>
+                                <p>Curved wrist-rest edge, anti-glare matte finish top to reduce eye strain, and a dynamic sloped footrest to properly promote leg circulation during studying sessions.</p>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <div>
+                                <h4>Build Materials</h4>
+                                <p>Constructed with a sustainable bamboo core for maximum durability, wrapped in a smooth touch carbon fiber texture, supported by aerospace-grade aluminum "Line" leg beams.</p>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fa-solid fa-plug"></i>
+                            <div>
+                                <h4>Integrated Connectivity</h4>
+                                <p>Concealed magnetic cable management channels, 2x built-in USB-C fast charging ports under the lip, and 1x integrated flush wireless charging pad on the surface.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="prototype" class="tab-section section center-content">
+            <h2 class="section-title">Interactive <span class="gradient-text">Prototype</span></h2>
+            <p class="subtitle">Hover over the glowing hotspots on the model to reveal our design execution.</p>
+            
+            <div class="prototype-showcase hotspot-view" style="max-width: 500px; margin: 0 auto; display: block; position: relative;">
+                <!-- Prototype photo -->
+                <img src="assets/prototype.png" alt="Ergonomic Desk Prototype" class="prototype-img" style="border: 2px solid var(--primary); box-shadow: 0 10px 40px rgba(56, 189, 248, 0.2);">
+                <div class="glow-effect"></div>
+                
+                <!-- Hotspot 1: Dot -->
+                <div class="hotspot" style="top: 80%; left: 30%;">
+                    <div class="hotspot-pin pulse-dot"></div>
+                    <div class="hotspot-tooltip left-tip">
+                        <h4>The Dot</h4>
+                        <p>Stable connection junction securing the leg joints cleanly.</p>
+                    </div>
+                </div>
+
+                <!-- Hotspot 2: Line -->
+                <div class="hotspot" style="top: 45%; left: 80%;">
+                    <div class="hotspot-pin pulse-line"></div>
+                    <div class="hotspot-tooltip right-tip">
+                        <h4>The Line</h4>
+                        <p>Sleek metallic strut lines allowing variable height extensions.</p>
+                    </div>
+                </div>
+
+                <!-- Hotspot 3: Shape -->
+                <div class="hotspot" style="top: 25%; left: 20%;">
+                    <div class="hotspot-pin pulse-shape"></div>
+                    <div class="hotspot-tooltip bottom-tip">
+                        <h4>The Shape</h4>
+                        <p>Solid geometric rectangles to host monitors perfectly horizontally.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS SECTION -->
+        <section id="process" class="tab-section section bg-secondary">
+            <div class="container">
+                <h2 class="section-title text-center">Innovation <span class="gradient-text">Flowchart</span></h2>
+                <p class="subtitle text-center">A neat and proper view of our Design Thinking Methodology.</p>
+                
+                <div class="mermaid-container" style="max-width: 900px; margin: 0 auto; background: var(--bg-dark);">
+                    <div class="mermaid">
+                        flowchart TD
+                        A["1. Empathize:<br>Understand Student Posture Issues"] -->|Leads To| B["2. Define:<br>Identify Needs for Better Support"]
+                        B -->|Inspires| C["3. Ideate:<br>Apply Dot, Line & Shape Concepts"]
+                        C -->|Transforms Into| D["4. Prototype:<br>Build the Ergonomic Desk Model"]
+                        D -->|Validated By| E["5. Test:<br>Get Feedback & Refine Design"]
+
+                        classDef default fill:#1e293b,stroke:#818cf8,stroke-width:2px,color:#f8fafc;
+                        classDef highlight fill:#38bdf8,stroke:#0f172a,stroke-width:3px,color:#0f172a;
+                        class A,E highlight;
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEEDBACK / TEST SECTION -->
+        <section id="feedback" class="tab-section section center-content">
+            <div class="container" style="max-width: 600px;">
+                <h2 class="section-title"><span class="gradient-text">Testing Data</span> Phase</h2>
+                <p class="subtitle">Design Thinking relies on crucial end-user feedback. Participate in our lab experiment by reviewing the prototype!</p>
+                
+                <div class="feedback-form-container card-glow">
+                    <form id="feedbackForm" class="feedback-form">
+                        <div class="form-group" style="text-align: left;">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="Enter your name" required style="width: 100%; padding: 1rem; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-nav); color: var(--text-main); margin-top: 0.5rem;">
+                        </div>
+                        <div class="form-group" style="text-align: left; margin-top: 1.5rem;">
+                            <label for="email">Student ID / Email</label>
+                            <input type="email" id="email" placeholder="Enter your school email" required style="width: 100%; padding: 1rem; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-nav); color: var(--text-main); margin-top: 0.5rem;">
+                        </div>
+                        <div class="form-group" style="text-align: left; margin-top: 1.5rem;">
+                            <label for="rating">Rate the Prototype Build (1 = Poor, 5 = Peak Ergonomics)</label>
+                            <select id="rating" required style="width: 100%; padding: 1rem; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-nav); color: var(--text-main); margin-top: 0.5rem;">
+                                <option value="">Select a score...</option>
+                                <option value="5">⭐⭐⭐⭐⭐ (5) Revolutionary</option>
+                                <option value="4">⭐⭐⭐⭐ (4) Great functionality</option>
+                                <option value="3">⭐⭐⭐ (3) Standard improvement</option>
+                                <option value="2">⭐⭐ (2) Needs major tweaking</option>
+                                <option value="1">⭐ (1) Back to the drawing board</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="text-align: left; margin-top: 1.5rem; margin-bottom: 2rem;">
+                            <label for="comments">Did we apply the Dots/Lines/Shapes effectively?</label>
+                            <textarea id="comments" rows="4" placeholder="Share your insights..." required style="width: 100%; padding: 1rem; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-nav); color: var(--text-main); margin-top: 0.5rem;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 8px; padding: 1rem;">Upload Feedback Data</button>
+                    </form>
+                    
+                    <div id="successMessage" style="display: none; text-align: center; padding: 2rem;">
+                        <i class="fa-solid fa-circle-check" style="font-size: 4rem; color: #10b981; margin-bottom: 1rem;"></i>
+                        <h3 style="font-size: 2rem; margin-bottom: 0.5rem;">Data Acquired!</h3>
+                        <p style="color: var(--text-muted);">Your feedback has been appended to our Design Thinking test logs. Your input drives our next iteration.</p>
+                        <button class="btn btn-outline" style="margin-top: 2rem;" onclick="document.getElementById('successMessage').style.display='none'; document.getElementById('feedbackForm').style.display='block'; document.getElementById('feedbackForm').reset();">Submit Another Form</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">Ergo<span>Next</span></div>
+            <p>Design Thinking & Innovation Lab Experiment</p>
+            <p>&copy; 2026 Student Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
